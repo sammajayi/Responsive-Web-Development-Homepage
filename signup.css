@@ -177,11 +177,11 @@ button {
 /*Styles for small devices*/
 @media only screen and (max-width: 800px) {
   .main-container {
-    display: block;
+    display:flex;
     justify-content: center;
-    margin-top: 0px;
-    padding-left: 5px;
-    padding-right:50px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  
   }
   .form-wrap .form-label {
     display: flex;
@@ -207,10 +207,10 @@ button {
   }
   .header {
     margin-top: 20px;
-    width: 100%;
-    padding: 0;
-    margin-left: 10px;
-    
+    max-width:fit-content;
+    margin-left: 0;
+    margin-bottom: -200px;
+    width: 327px;
   }
   .mobile_text {
     display: block;
@@ -222,6 +222,7 @@ button {
     margin-top: -15px;
     margin-bottom: 20px;
     color: hsla(0, 0%, 45%, 1);
+    width: 327px;
   }
   .input-form,
   .input-pwd,
@@ -253,8 +254,7 @@ button {
     letter-spacing: -0.800000011920929px;
     text-align: left;
     padding-top: -30px;
-    width: 100%;
-    
+    width: 327px;
   }
   .terms-and-conditions {
     display: block;
@@ -264,11 +264,4 @@ button {
     font-weight: 500;
     margin-top: 40px;
   }
-form{
-  display: block;
-  width: 100%;
-  margin-top: 0px;
-  margin:0px;
-  height: fit-content;
-}
 }
