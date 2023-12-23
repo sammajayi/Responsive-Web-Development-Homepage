@@ -184,6 +184,7 @@ button {
   .form-container {
     display: block;
     flex-direction: row-reverse;
+    justify-content: center;
     padding: 20px;
     margin: 20px;
     width: 350px;
