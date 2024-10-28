@@ -31,16 +31,16 @@
     </div>
 
     <div class="form-container">
-        <form action="/submit" method="post">
+        <form id="myForm" onsubmit="validateForm()">
 
             <div class="form-wrap">
                 <label for="fname-label" id="fname-label">First Name</label>
-                <input id="fname" type="text" placeholder="Samuel" class="input-form" required />
+                <input id="fname" type="text" placeholder="Samuel" class="input-form" />
             </div>
 
             <div class="form-wrap">
                 <label for="lname-label" id="lname-label">Last Name</label>
-                <input id="lname" type="text" placeholder="Ajayi" class="input-form" required />
+                <input id="lname" type="text" placeholder="Ajayi" class="input-form"  />
             </div>
 
             <div class="form-wrap">
@@ -55,22 +55,22 @@
 
             <div class="form-wrap">
             <label for="DOB" id="Date-of-birth">Date of Birth</label>
-            <input id="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Select here" class="input-form" required />
+            <input id="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Select here" class="input-form" />
             </div>
 
             <div class="form-wrap">
                 <label for="Weight" id="Weight">Weight (KG)</label>
-            <input id="Weight" type="text" placeholder="Enter weight" class="input-form" required />
+            <input id="Weight" type="text" placeholder="Enter weight" class="input-form" />
             </div>
 
             <div class="form-wrap">
                 <label for="Height" id="Height">Height (CM)</label>
-                <input id="height" type="text" placeholder="Enter height here.." class="input-form" required />
+                <input id="height" type="text" placeholder="Enter height here.." class="input-form" />
             </div>
 
             <div class="form-label">
                 <label for="activity">Activity Level</label>
-                <select name="gener" id="dropdown" class="select-activity">
+                <select name="activity-level" id="activity-dropdown" class="select-activity">
                     <option disabled selected value>Select here</option>
                     <option></option>
                 </select>
@@ -78,11 +78,11 @@
 
             <div class="form-label">
                 <label for="password" id="password">Password</label>
-                <input id="password" type="password" class="input-pwd" required />
+                <input id="password" type="password" class="input-pwd"  />
             </div>
 
             <div class="btn">
-                <button id="submit" type="button">Register</button>
+                <button id="submitButton" type="submit">Register</button>
             </div>
 
             <p class="terms-and-conditions">
@@ -91,5 +91,6 @@
         </form>
     </div>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
