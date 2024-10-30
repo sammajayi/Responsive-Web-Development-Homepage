@@ -12,9 +12,6 @@ const password = document.getElementById('password');
 
 
 
-
-
-
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -26,6 +23,8 @@ const weightError = document.getElementById('weight-error');
 const heightError = document.getElementById('height-error');
 const activityError = document.getElementById('activity-error');
 const pwdError = document.getElementById('pwd-error');
+
+
 
 
     if (firstName.value.trim() === ""){
@@ -51,8 +50,23 @@ const pwdError = document.getElementById('pwd-error');
     }
     if (password.value.trim() === ""){
         pwdError.style.display = "block";
+    } else if (!password.value.match(/[a-z]/)) {
+        pwdError.textContent = "Password must contain at least one lowercase letter.";
+    } else if (!password.value.match(/[A-Z]/)) {
+        pwdError.textContent = "Password must contain at least one uppercase letter.";
+    } else if (!password.value.match(/[0-9]/)) {
+        pwdError.textContent = "Password must contain at least one number.";
+    } else if (!password.value.match(/[^a-zA-Z\d]/)) {
+        pwdError.textContent = "Password must contain at least one special character.";
+    } else {
+        pwdError.textContent = ""; // Clear error if all conditions are met
     }
 
+    // if (password > 8 && ) {
+    //     pwdError.textContent = "Password must be at least 8 characters";
+    // }
+
+    
     
 });
 

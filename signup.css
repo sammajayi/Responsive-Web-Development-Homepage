@@ -96,6 +96,7 @@ label {
 .form-label{
   position: relative;
   margin-bottom: 20px;
+  padding-top: 10px;
 }
 
 .select-gender {
