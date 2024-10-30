@@ -31,41 +31,47 @@
     </div>
 
     <div class="form-container">
-        <form id="myForm" onsubmit="validateForm()">
+        <form id="myForm">
 
             <div class="form-wrap">
                 <label for="fname-label" id="fname-label">First Name</label>
                 <input id="fname" type="text" placeholder="Samuel" class="input-form" />
+                <span class="errorMsg" id="fname-error">First Name is required</span>
             </div>
 
             <div class="form-wrap">
                 <label for="lname-label" id="lname-label">Last Name</label>
                 <input id="lname" type="text" placeholder="Ajayi" class="input-form"  />
+                <span class="errorMsg" id="lname-error">Last Name is required</span>
             </div>
 
             <div class="form-wrap">
                 <label for="gender">Gender</label>
-                <select name="gender" id="dropdown" class="input-form">
+                <select name="gender" id="gender-dropdown" class="input-form">
                     <option disabled selected value>Select here</option>
                     <option>Male</option>
                     <option>Female</option>
                     <option>Non-binary</option>
                 </select>
+                <span class="errorMsg" id="gender-error">Please select your gender</span>
             </div>
 
             <div class="form-wrap">
-            <label for="DOB" id="Date-of-birth">Date of Birth</label>
-            <input id="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Select here" class="input-form" />
+            <label for="DOB" id="DOB">Date of Birth</label>
+            <input id="date-of-birth" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Select here" class="input-form" />
+            <span class="errorMsg" id="dob-error">Please select your date of birth</span>
             </div>
 
             <div class="form-wrap">
                 <label for="Weight" id="Weight">Weight (KG)</label>
-            <input id="Weight" type="text" placeholder="Enter weight" class="input-form" />
+            <input id="weight" type="text" placeholder="Enter weight" class="input-form" />
+            <span class="errorMsg" id="weight-error">Weight is required</span>
             </div>
 
             <div class="form-wrap">
                 <label for="Height" id="Height">Height (CM)</label>
                 <input id="height" type="text" placeholder="Enter height here.." class="input-form" />
+                <span class="errorMsg" id="height-error">Height is required</span>
             </div>
 
             <div class="form-label">
@@ -74,15 +80,17 @@
                     <option disabled selected value>Select here</option>
                     <option></option>
                 </select>
+                <span class="errorMsg" id="activity-error">Activity Level is required</span>
             </div>
 
             <div class="form-label">
                 <label for="password" id="password">Password</label>
                 <input id="password" type="password" class="input-pwd"  />
+                <span class="errorMsg" id="pwd-error">Password is required</span>
             </div>
 
             <div class="btn">
-                <button id="submitButton" type="submit">Register</button>
+                <button id="submitButton" type="submit" >Register</button>
             </div>
 
             <p class="terms-and-conditions">
